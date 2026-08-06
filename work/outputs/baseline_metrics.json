@@ -1,0 +1,16 @@
+{
+  "rule": "low_ctr_strong_position",
+  "thresholds": {
+    "min_impressions": 500,
+    "position_min": 1,
+    "position_max": 20,
+    "ctr_below_fraction_of_tier_median": 0.5
+  },
+  "visible_pool": 22006,
+  "queue_size": 2920,
+  "flagged_share_of_visible": 0.133,
+  "signal_verdicts": {
+    "ctr_vs_position": "MIXED",
+    "staleness_vs_ctr": "FALSE"
+  }
+}
