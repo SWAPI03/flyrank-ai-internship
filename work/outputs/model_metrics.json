@@ -1,0 +1,26 @@
+{
+  "split": "client_holdout_gss_seed42",
+  "review_population": 10807,
+  "metrics": [
+    {
+      "method": "Baseline (tier median)",
+      "MAE": 0.2966,
+      "R2": -0.2423
+    },
+    {
+      "method": "Linear Regression",
+      "MAE": 0.2917,
+      "R2": -0.0337
+    },
+    {
+      "method": "Decision Tree (d=5)",
+      "MAE": 0.2843,
+      "R2": -0.0506
+    },
+    {
+      "method": "Gradient Boosting",
+      "MAE": 0.2864,
+      "R2": 0.0013
+    }
+  ]
+}
