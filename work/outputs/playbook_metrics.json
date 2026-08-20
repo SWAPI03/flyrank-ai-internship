@@ -1,0 +1,21 @@
+{
+  "queue_size": 3237,
+  "flagged_share_of_visible": 0.147,
+  "decay_window_overlap": 659,
+  "archetype_counts": {
+    "ctr_gap_candidate": 2299,
+    "high_value_ctr_gap": 938
+  },
+  "monitoring_baseline": {
+    "flagged_share_of_visible": 0.147,
+    "queue_size": 3237,
+    "tier_median_ctr": {
+      "deep": 0.0,
+      "page_1": 0.23,
+      "page_3_5": 0.06,
+      "striking": 0.15,
+      "top_3": 0.19
+    },
+    "decay_window_overlap": 659
+  }
+}
