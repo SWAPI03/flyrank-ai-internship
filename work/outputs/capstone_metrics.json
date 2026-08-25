@@ -1,0 +1,30 @@
+{
+  "review_population": 10807,
+  "model_vs_baseline": [
+    {
+      "method": "Baseline (tier median)",
+      "MAE": 0.2966,
+      "R2": -0.2423
+    },
+    {
+      "method": "Linear Regression",
+      "MAE": 0.2917,
+      "R2": -0.0337
+    },
+    {
+      "method": "Decision Tree (d=5)",
+      "MAE": 0.2843,
+      "R2": -0.0506
+    },
+    {
+      "method": "Gradient Boosting",
+      "MAE": 0.2864,
+      "R2": 0.0013
+    }
+  ],
+  "r2_random": 0.143,
+  "r2_group": 0.001,
+  "leak_r2": 0.978,
+  "queue_size": 3237,
+  "decay_overlap": 659
+}
