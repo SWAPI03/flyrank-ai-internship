@@ -19,6 +19,9 @@ jobs:
   run-notebook-03:
     runs-on: ubuntu-latest
     timeout-minutes: 35
+    permissions:
+      contents: read
+      actions: write   # for the keepalive step below
     env:
       HF_TOKEN: ${{ secrets.HF_TOKEN }}
     steps:
@@ -50,3 +53,10 @@ jobs:
           NotebookClient(nb, timeout=1500, kernel_name="python3").execute()
           print("notebook 03 executed clean against the hosted release")
           PY
+      - name: Keep the schedule alive
+        # GitHub disables scheduled workflows after 60 days without repo
+        # activity; re-enabling via the API resets that timer.
+        if: always() && github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/data-path-smoke.yml/enable"
